@@ -1,0 +1,23 @@
+/myfree.c/1.2/Tue Jan 19 10:23:01 2010//
+/sdp_hash_append.c/1.2/Tue Jan 19 13:25:41 2010//
+/sdp_populate_message.c/1.2/Tue Jan 19 13:44:09 2010//
+/sdp_add_attribute.c/1.4/Tue Jan 19 13:45:43 2010//
+/sdp_add_connection.c/1.2/Tue Jan 19 13:46:25 2010//
+/sdp_add_time.c/1.2/Tue Jan 19 13:46:25 2010//
+/sdp_add_zone.c/1.2/Tue Jan 19 13:46:25 2010//
+/sdp_add_bandwidth.c/1.2/Tue Jan 19 13:59:53 2010//
+/sdp_add_email.c/1.3/Tue Jan 19 14:00:56 2010//
+/sdp_add_information.c/1.3/Tue Jan 19 14:01:19 2010//
+/sdp_add_key.c/1.3/Tue Jan 19 14:01:47 2010//
+/sdp_add_media.c/1.3/Tue Jan 19 14:01:58 2010//
+/sdp_add_name.c/1.3/Tue Jan 19 14:02:17 2010//
+/sdp_add_origin.c/1.3/Tue Jan 19 14:03:00 2010//
+/sdp_add_phone.c/1.3/Tue Jan 19 14:03:10 2010//
+/sdp_add_version.c/1.3/Tue Jan 19 14:04:23 2010//
+/sdp_add_repeat.c/1.3/Tue Jan 19 14:03:25 2010//
+/sdp_add_uri.c/1.2/Tue Jan 19 14:08:37 2010//
+/sdp_session_to_str.c/1.2/Tue Jan 19 14:24:25 2010//
+/sdp_checker.c/1.3/Tue Jan 19 15:26:24 2010//
+/err_handler.c/1.3/Tue Jan 19 16:01:28 2010//
+/sdp_logger.c/1.2/Wed Jan 20 06:50:46 2010//
+D

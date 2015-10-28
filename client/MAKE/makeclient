@@ -1,0 +1,113 @@
+#/**********************************************************************
+
+# *  FILE NAME   :  makeclient
+
+# *  DESCRIPTION :  This file contans shell command to compile and
+#             execute the program
+# *
+
+# *    DATE            NAME           REFERENCE      REASON
+#      ----------------------------------------------------------------
+# *    16-01-2010  Oct26_09/Oct26_D_01 New Code       To run code
+
+# *  Copyright (c)2010 Aricent Technologies (Holdings) Ltd. All Rights Reserved
+
+# *********************************************************************/
+
+# /*************************** Defining Macros ************************/
+
+CL_OBJ = sdp_client_main.o sdp_client_recvr.o sdp_client_sender.o sdp_media_comp.o sdp_write_string_to_file.o
+
+C_OBJ = err_handler.o sdp_populate_message.o sdp_add_attribute.o sdp_add_bandwidth.o sdp_add_connection.o sdp_add_email.o sdp_add_information.o sdp_add_key.o sdp_add_media.o sdp_add_name.o sdp_add_origin.o sdp_add_phone.o sdp_add_repeat.o sdp_add_time.o sdp_add_uri.o sdp_add_version.o sdp_add_zone.o myfree.o sdp_checker.o sdp_session_to_str.o sdp_hash_append.o
+
+client : $(CL_OBJ) $(C_OBJ)
+
+	gcc -o client -g -lrt $(CL_OBJ) $(C_OBJ)
+	mv client ../BIN/
+	mv $(CL_OBJ) ../OBJ/
+	mv $(C_OBJ) ../../common/OBJ/
+
+CFLAGS = -c -g -Wall
+
+sdp_client_main.o : ./../SRC/sdp_client_main.c
+	gcc $(CFLAGS) ./../SRC/sdp_client_main.c
+
+err_handler.o : ./../../common/LIB/err_handler.c
+	gcc $(CFLAGS) ./../../common/LIB/err_handler.c
+
+sdp_populate_message.o : ./../../common/LIB/sdp_populate_message.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_populate_message.c
+
+sdp_add_attribute.o : ./../../common/LIB/sdp_add_attribute.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_attribute.c
+
+sdp_add_bandwidth.o : ./../../common/LIB/sdp_add_bandwidth.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_bandwidth.c
+
+sdp_add_connection.o : ./../../common/LIB/sdp_add_connection.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_connection.c
+
+sdp_add_email.o : ./../../common/LIB/sdp_add_email.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_email.c
+
+sdp_client_recvr.o : ./../LIB/sdp_client_recvr.c
+	gcc $(CFLAGS) ./../LIB/sdp_client_recvr.c
+
+sdp_client_sender.o : ./../LIB/sdp_client_sender.c
+	gcc $(CFLAGS) ./../LIB/sdp_client_sender.c
+
+sdp_write_string_to_file.o : ./../LIB/sdp_write_string_to_file.c
+	gcc $(CFLAGS) ./../LIB/sdp_write_string_to_file.c
+
+sdp_add_information.o : ./../../common/LIB/sdp_add_information.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_information.c
+
+sdp_add_key.o : ./../../common/LIB/sdp_add_key.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_key.c
+
+sdp_add_media.o : ./../../common/LIB/sdp_add_media.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_media.c
+
+sdp_add_name.o : ./../../common/LIB/sdp_add_name.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_name.c
+
+sdp_add_origin.o : ./../../common/LIB/sdp_add_origin.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_origin.c
+
+sdp_add_phone.o : ./../../common/LIB/sdp_add_phone.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_phone.c
+
+sdp_add_repeat.o : ./../../common/LIB/sdp_add_repeat.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_repeat.c
+
+sdp_add_time.o : ./../../common/LIB/sdp_add_time.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_time.c
+
+sdp_add_uri.o : ./../../common/LIB/sdp_add_uri.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_uri.c
+
+sdp_add_version.o : ./../../common/LIB/sdp_add_version.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_version.c
+
+sdp_add_zone.o : ./../../common/LIB/sdp_add_zone.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_add_zone.c
+
+myfree.o : ./../../common/LIB/myfree.c
+	gcc $(CFLAGS) ./../../common/LIB/myfree.c
+
+sdp_checker.o : ./../../common/LIB/sdp_checker.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_checker.c
+
+sdp_session_to_str.o : ./../../common/LIB/sdp_session_to_str.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_session_to_str.c
+
+sdp_media_comp.o : ./../LIB/sdp_media_comp.c
+	gcc $(CFLAGS) ./../LIB/sdp_media_comp.c
+
+sdp_hash_append.o : ./../../common/LIB/sdp_hash_append.c
+	gcc $(CFLAGS) ./../../common/LIB/sdp_hash_append.c
+
+clean : 
+	rm ../OBJ/*.o
+	rm ../BIN/client
+	rm ../../common/OBJ/*.o
